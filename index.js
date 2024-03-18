@@ -71,5 +71,9 @@ transporter.verify(function (err, success) {
   }
 });
 
+app.get("/", (req, res) => {
+  res.send("Hello World!");
+});
+
 const PORT = process.env.PORT || 5000;
 app.listen(PORT, () => console.info("server has started", PORT));
